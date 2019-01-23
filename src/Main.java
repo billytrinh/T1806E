@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import pkg2.*;
 
 public class Main {
 
@@ -27,6 +28,28 @@ public class Main {
         }else{
             System.out.println(objCustomer2.customerName + " nhieu tuoi hon");
         }
+
+        Car[] car_arr = new Car[5];
+        for (int i=0;i< 5;i++){
+            car_arr[i] = new Car();
+        }
+
+        Car car1 = new Car();
+        car1.carId = 1;
+        car1.color = "Red";
+        car1.carKm = 1000;
+        car1.brand = "BMW";
+//        System.out.println("Mau xe: "+ car1.color);
+//        //car1.running();
+        Car car2 = new Car(5,7500,"Yellow","Honda");
+//        car2.carId = 2;
+//        car2.color = "GREEN";
+//        car2.carKm = 2000;
+//        car2.brand = "Audi";
+//
+//        car1.reMake(car2,"Pink");
+//        System.out.println("Mau xe: "+ car1.color);
+
 
     }
 }
