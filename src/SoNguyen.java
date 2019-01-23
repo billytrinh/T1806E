@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SoNguyen{
 
-    public int so_can_tinh;
+    int so_can_tinh;
 
     public int so_thu_nhat;
     public int so_thu_hai;
