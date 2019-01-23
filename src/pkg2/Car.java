@@ -5,6 +5,7 @@ public class Car {
    public String color;
    public int carKm;
    public String brand;
+   public int price;
 
    public static int so_banh = 4;
 
@@ -12,11 +13,12 @@ public class Car {
        System.out.println("Vua tao ra 1 cai o to");
    }
 
-   public Car(int x,int y, String z, String k){
-      this.carId = x;
-      this.carKm = y;
-      this.color = z;
-      this.brand = k;
+   public Car(int carId,int carKm, String color, String brand,int price){
+      this.carId = carId;
+      this.carKm = carKm;
+      this.color = color;
+      this.brand = brand;
+      this.price = price;
    }
 
    public static void main(String[] args){
