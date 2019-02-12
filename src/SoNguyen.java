@@ -38,4 +38,17 @@ public class SoNguyen{
         return this.so_thu_nhat + this.so_thu_hai;
     }
 
+    public void tinhToan(int x){
+        int gt = 1;
+        for (int i=1;i<=x;i++){
+            gt*=i;
+        }
+        System.out.println("Ket qua: "+gt);
+    }
+
+    public void tinhToan(float x){
+        System.out.println("Ket qua: "+(x*x));
+    }
+
+
 }

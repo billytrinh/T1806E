@@ -15,18 +15,27 @@ public class Main {
         System.out.println("Chon chuc nang:");
         System.out.println("1.Nhap so nguyen");
         System.out.println("2.Nhap so thuc");
-
-        //songuyen.tinhtoan(x);
-
-        Dog dog1 = new Dog("Chó nhật","đen",3,2);
-        Cat cat1 = new Cat(1,"Mèo đen","Vàng",1,2);
-        if(dog1.weight > cat1.weight){
-            dog1.sua(2);
-            cat1.chay();
+        Scanner scanner = new Scanner(System.in);
+        int cn = scanner.nextInt();
+        System.out.println("Nhap 1 so:");
+        SoNguyen soNguyen = new SoNguyen();
+        if(cn == 1){
+            int x = scanner.nextInt();
+            soNguyen.tinhToan(x);
         }else {
-            cat1.cao();
-            dog1.chay();
+            float x = scanner.nextFloat();
+            soNguyen.tinhToan(x);
         }
+        
+//        Dog dog1 = new Dog("Chó nhật","đen",3,2);
+//        Cat cat1 = new Cat(1,"Mèo đen","Vàng",1,2);
+//        if(dog1.weight > cat1.weight){
+//            dog1.sua(2);
+//            cat1.chay();
+//        }else {
+//            cat1.cao();
+//            dog1.chay();
+//        }
     }
 
     public static void main2(String[] args) {
