@@ -1,5 +1,7 @@
 package Animal;
 
+import java.util.ArrayList;
+
 public class Dog {
 
     public int ID;
@@ -7,6 +9,8 @@ public class Dog {
     public String color;
     public int weight;
     public int age;
+    public ArrayList<String> danh_sach_thuc_an;
+    public ArrayList<Cat> danh_sach_ban;
 
     public Dog(int ID,String type,String color,int weight,int age){
         this.ID = ID;
@@ -14,6 +18,15 @@ public class Dog {
         this.color = color;
         this.weight = weight;
         this.age = age;
+        ArrayList<String> ds = new ArrayList();
+        ds.add("Cá");
+        ds.add("Thịt");
+        ds.add("Gà");
+        this.danh_sach_thuc_an = ds;
+        ArrayList<Cat> ds_cat = new ArrayList<>();
+        Cat cat1 = new Cat(1,"Mèo đen","Vàng",1,2);
+        ds_cat.add(cat1);
+        this.danh_sach_ban = ds_cat;
     }
 
     public Dog(String type,String color,int weight,int age){

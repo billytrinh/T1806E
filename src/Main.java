@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import pkg2.*;
 import Animal.*;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -12,21 +13,63 @@ public class Main {
     public enum seasion{mua_xuan,mua_he,mua_thu,mua_dong};
 
     public static void main(String[] args) {
-        System.out.println("Chon chuc nang:");
-        System.out.println("1.Nhap so nguyen");
-        System.out.println("2.Nhap so thuc");
-        Scanner scanner = new Scanner(System.in);
-        int cn = scanner.nextInt();
-        System.out.println("Nhap 1 so:");
-        SoNguyen soNguyen = new SoNguyen();
-        if(cn == 1){
-            int x = scanner.nextInt();
-            soNguyen.tinhToan(x);
-        }else {
-            float x = scanner.nextFloat();
-            soNguyen.tinhToan(x);
-        }
-        
+            int[] x = {1,2,3,4};
+//            for(int i=0; i< x.length;i++){
+//                System.out.println(x[i]);
+//            }
+            for(int value:x){
+               // System.out.println(value);
+            }
+          //  int[][] y = new int[2][3];
+            int[][] y = {{1,2,3},{4,5,6}};
+            for (int i=0;i<y.length;i++){
+                //for (int j=0;j<y[i].length;j++){
+                for(int value:y[i]){
+
+                }
+            }
+
+            ArrayList arr = new ArrayList();
+            arr.add(3);
+            arr.add(3.14);
+            arr.add(1,"hello");
+            for(int i=0;i<arr.size();i++){
+                System.out.println(arr.get(i));
+            }
+
+            ArrayList<String> stringArr = new ArrayList<String>();
+            stringArr.add("hello");
+            stringArr.add("world");
+
+            ArrayList<Dog>  dogArrayList = new ArrayList<Dog>();
+            Dog dog1 = new Dog(1,"Chó nhật","đen",3,2);
+            Dog dog2 = new Dog(2,"Chó nhật","vang",3,2);
+            Dog dog3 = new Dog(3,"Chó nhật","xanh",3,2);
+            dogArrayList.add(dog1);
+            dogArrayList.add(dog2);
+            dogArrayList.add(dog3);
+            for (Dog dog:dogArrayList){
+                System.out.println("Cho co mau: "+dog.color);
+                for (String thuc_an:dog.danh_sach_thuc_an){
+                    System.out.println(thuc_an);
+                }
+            }
+
+//        System.out.println("Chon chuc nang:");
+//        System.out.println("1.Nhap so nguyen");
+//        System.out.println("2.Nhap so thuc");
+//        Scanner scanner = new Scanner(System.in);
+//        int cn = scanner.nextInt();
+//        System.out.println("Nhap 1 so:");
+//        SoNguyen soNguyen = new SoNguyen();
+//        if(cn == 1){
+//            int x = scanner.nextInt();
+//            soNguyen.tinhToan(x);
+//        }else {
+//            float x = scanner.nextFloat();
+//            soNguyen.tinhToan(x);
+//        }
+//
 //        Dog dog1 = new Dog("Chó nhật","đen",3,2);
 //        Cat cat1 = new Cat(1,"Mèo đen","Vàng",1,2);
 //        if(dog1.weight > cat1.weight){
