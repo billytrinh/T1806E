@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import pkg2.*;
+import Animal.*;
 
 public class Main {
 
@@ -11,6 +12,24 @@ public class Main {
     public enum seasion{mua_xuan,mua_he,mua_thu,mua_dong};
 
     public static void main(String[] args) {
+        System.out.println("Chon chuc nang:");
+        System.out.println("1.Nhap so nguyen");
+        System.out.println("2.Nhap so thuc");
+
+        //songuyen.tinhtoan(x);
+
+        Dog dog1 = new Dog("Chó nhật","đen",3,2);
+        Cat cat1 = new Cat(1,"Mèo đen","Vàng",1,2);
+        if(dog1.weight > cat1.weight){
+            dog1.sua(2);
+            cat1.chay();
+        }else {
+            cat1.cao();
+            dog1.chay();
+        }
+    }
+
+    public static void main2(String[] args) {
 //        Customer objCustomer1 = new Customer();
 //        objCustomer1.customerId = 1;
 //        objCustomer1.customerName = "Nguyen van An";
