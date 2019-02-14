@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import com.sun.xml.internal.fastinfoset.util.StringArray;
 import pkg2.*;
 import Animal.*;
 import java.util.ArrayList;
@@ -13,6 +15,10 @@ public class Main {
     public enum seasion{mua_xuan,mua_he,mua_thu,mua_dong};
 
     public static void main(String[] args) {
+        String str = new String();
+        str = "hello";
+        str += " world";
+        str.length();
             int[] x = {1,2,3,4};
 //            for(int i=0; i< x.length;i++){
 //                System.out.println(x[i]);
@@ -28,14 +34,15 @@ public class Main {
 
                 }
             }
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append("hello");
+            stringBuilder.append(" world");
 
-            ArrayList arr = new ArrayList();
-            arr.add(3);
-            arr.add(3.14);
-            arr.add(1,"hello");
-            for(int i=0;i<arr.size();i++){
-                System.out.println(arr.get(i));
-            }
+            System.out.println(stringBuilder.delete(2,8));
+            StringArray stringArray = new StringArray();
+            stringArray.add("hellox");
+            stringArray.add("hellox2");
+        //    stringArray.createArray();
 
             ArrayList<String> stringArr = new ArrayList<String>();
             stringArr.add("hello");
