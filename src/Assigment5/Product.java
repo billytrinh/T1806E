@@ -1,6 +1,6 @@
 package Assigment5;
 
-public class Product {
+public abstract class Product {
     public int ID;
     public String productName;
     public int price;
@@ -13,5 +13,11 @@ public class Product {
         this.price = price;
         this.qty = qty;
         this.productType = productType;
+    }
+
+    public void buyItem(Order order,int qty){
+        order.grandTotal += qty*this.price;
+        this.qty -= qty;
+        order.productArrayList.add(this);
     }
 }
