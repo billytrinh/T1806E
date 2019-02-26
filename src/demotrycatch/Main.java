@@ -1,14 +1,34 @@
 package demotrycatch;
 
 import java.time.*;
+import java.util.ArrayList;
 
 interface Sum{
     int tinhtong(int a,int b);
 }
 
+interface StudentInterface{
+    void action(ArrayList<Student> studentArrayList);
+}
+
 public class Main {
 
     public static void main(String[] args){
+        ArrayList<Student> students = new ArrayList<Student>();
+        students.add(new Student("Le van A",LocalDate.of(1999,12,31),3));
+        students.add(new Student("Le van B",LocalDate.of(2000,11,20),2));
+        students.add(new Student("Le van C",LocalDate.of(2001,8,12),9));
+
+        StudentInterface studentInterface = (ArrayList<Student> studentArrayList) ->{
+            float sum=0;
+            for (Student student:studentArrayList){
+                System.out.println(student.name);
+                sum += student.mark;
+            }
+            System.out.println("diem trung binh: "+sum/studentArrayList.size());
+        };
+        studentInterface.action(students);
+
         SayHello xx = new SayHello() {
             @Override
             public void sayHello() {
