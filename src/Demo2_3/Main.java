@@ -4,6 +4,16 @@ import java.util.*;
 import java.util.stream.Stream;
 
 import Ass8.*;
+import demotrycatch.SayHello;
+
+interface Hello{
+    void sayHello();
+}
+
+interface LambdaDemo{
+    void demo(String x);
+}
+
 public class Main {
     public static void main(String[] args){
 //        int x = -2;
@@ -92,6 +102,28 @@ public class Main {
                     }
                 })
                 .forEach(s -> System.out.println(s));
+        for (String x:arrString){
+            System.out.println(x);
+        }
 
+        SayHello sayHello = new SayHello() {
+            @Override
+            public void sayHello() {
+                System.out.println("Hello...");
+            }
+        };
+
+        sayHello.sayHello();
+
+        SayHello sayHello2 = ()->{
+            System.out.println("Hello 2");
+        };
+
+        sayHello2.sayHello();
+
+        LambdaDemo lambdaDemo = (String x) ->{
+            System.out.println("Hello "+x);
+        };
+        lambdaDemo.demo("aaaa");
     }
 }
