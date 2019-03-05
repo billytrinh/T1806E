@@ -1,6 +1,7 @@
 package Demo2_3;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import Ass8.*;
@@ -100,8 +101,9 @@ public class Main {
                     public int compare(String o1, String o2) {
                         return o2.compareTo(o1);
                     }
-                });
+                }).collect(Collectors.toList());
                 //.forEach(s -> System.out.println(s));
+        arrString.forEach(System.out::println);
         for (String x:arrString){
             System.out.println(x);
         }
