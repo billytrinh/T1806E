@@ -100,8 +100,8 @@ public class Main {
                     public int compare(String o1, String o2) {
                         return o2.compareTo(o1);
                     }
-                })
-                .forEach(s -> System.out.println(s));
+                });
+                //.forEach(s -> System.out.println(s));
         for (String x:arrString){
             System.out.println(x);
         }
