@@ -1,6 +1,6 @@
 package Assignment6;
 
-public class PhoneNumber implements Comparable<PhoneNumber>{
+public class PhoneNumber {
 
     public String name;
     public String phone;
@@ -11,8 +11,8 @@ public class PhoneNumber implements Comparable<PhoneNumber>{
     }
 
 
-    @Override
-    public int compareTo(PhoneNumber phoneNumber) {
-        return this.name.compareTo(phoneNumber.name);
-    }
+//    @Override
+//    public int compareTo(PhoneNumber phoneNumber) {
+//        return this.name.compareTo(phoneNumber.name);
+//    }
 }
