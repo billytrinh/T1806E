@@ -10,12 +10,17 @@ public class Main {
         }
         SubThread subThread = new SubThread();
         subThread.start();
-        subThread.setName("Sub thread");
-        System.out.println(subThread.getName());
-        for (int i =3;i<10;i++){
-            System.out.println("Running main thread -- "+i);
-            Thread.sleep(2000);
-        }
+//        subThread.setName("Sub thread");
+//        System.out.println(subThread.getName());
+//        for (int i =3;i<10;i++){
+//            System.out.println("Running main thread -- "+i);
+//            Thread.sleep(2000);
+//        }
+
+        // Using Runnable interface
+        Sub2Thread sub2Thread = new Sub2Thread();
+        Thread thread = new Thread(sub2Thread);
+        thread.start();
     }
 
 }
