@@ -10,10 +10,11 @@ public class CounterThread extends Thread{
 
 
     public void run(){
-        for (int i =0;i<20;i++){
+        for (int i =0;i<3;i++){
             //synchronized (this.counter){
-                this.counter.change();
-                this.counter.print();
+//                this.counter.change();
+//                this.counter.print();
+                this.counter.nextSNT();
                 try {
                     Thread.sleep(1000);
                 }catch (InterruptedException e){};
