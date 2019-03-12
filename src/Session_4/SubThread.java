@@ -3,18 +3,30 @@ package Session_4;
 public class SubThread extends Thread{
 
     public void run(){
-        for (int i=0;i<10;i++){
+
 
             if(Thread.currentThread().isDaemon()){
-                System.out.println("Deamon thread...");
+                for (int i=0;i<10;i++) {
+                    System.out.println("Deamon thread...");
+                    try {
+                        Thread.sleep(2000);
+                    }catch (InterruptedException e){
+                        System.out.println(e.getMessage());
+                    };
+                }
             }else {
-                System.out.println("Subthread is running ....");
+                for (int i=0;i<3;i++) {
+                    System.out.println(Thread.currentThread()
+                            .getName()+" is running ....");
+                    try {
+                        Thread.sleep(2000);
+                    }catch (InterruptedException e){
+                        System.out.println(e.getMessage());
+                    };
+                }
+
             }
-            try {
-                Thread.sleep(1000);
-            }catch (InterruptedException e){
-                System.out.println(e.getMessage());
-            };
+
         }
-    }
 }
+
