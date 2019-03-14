@@ -1,15 +1,20 @@
 package Session_3;
 
-public class Sub2Thread implements Runnable{
+public class Sub2Thread extends Thread{
+    public SoNguyenTo snt;
 
-    @Override
+    public Sub2Thread(SoNguyenTo t){
+        this.snt = t;
+    }
+
     public void run(){
-        for (int i=0;i<10;i++){
+        for (int i=0;i<30;i++){
+//            snt.change();
+//            snt.show();
+            snt.nextSnt();
             try {
-                System.out.println("    Running in sub thread --"+i);
                 Thread.sleep(1000);
-            }catch (InterruptedException e){}
-
+            }catch (Exception e){}
         }
     }
 }
