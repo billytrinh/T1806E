@@ -16,6 +16,5 @@
                 <TableColumn fx:id="status" prefWidth="73.0" text="Status" />
             </columns>
         </TableView>
-        <Button alignment="CENTER" onAction="#Login">Login</Button>
     </children>
 </Pane>
