@@ -10,7 +10,6 @@ import java.io.IOException;
 
 public class Demo extends Application {
 
-    public static Stage primaryStage;
 
     public static void main(String[] args) {
         launch(args);
@@ -18,7 +17,6 @@ public class Demo extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Demo.primaryStage = primaryStage;
         Parent root = FXMLLoader.load(getClass()
                 .getResource("demo.fxml"));
         Scene scene = new Scene(root,600,400);
@@ -28,8 +26,4 @@ public class Demo extends Application {
 
     }
 
-    public void changeScene(String fxml) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(fxml));
-        Demo.primaryStage.getScene().setRoot(root);
-    }
 }
