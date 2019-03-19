@@ -2,6 +2,7 @@ package Assignment5_2;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 import javafx.scene.control.TableColumn;
@@ -15,12 +16,13 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
+    @FXML
+    public TableView<User> tableView;
     public TableColumn<User,Integer> id;
     public TableColumn<User,String> name;
     public TableColumn<User,String> email;
     public TableColumn<User,Integer> status;
 
-    public TableView tableView;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -48,4 +50,6 @@ public class Controller implements Initializable {
 
 
     }
+
+
 }

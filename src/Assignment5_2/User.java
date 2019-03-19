@@ -6,14 +6,14 @@ public class User {
     public String email;
     public Integer status;
 
-    public User(Integer id, String name, String email, int status) {
+    public User(Integer id, String name, String email, Integer status) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.status = status;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -37,7 +37,7 @@ public class User {
         this.email = email;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
