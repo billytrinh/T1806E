@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="javafx_demo.Controller.Login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="82.0" layoutY="80.0" text="Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="81.0" layoutY="110.0" prefHeight="27.0" prefWidth="443.0" promptText="Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Text layoutX="241.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="83.21875">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Label layoutX="82.0" layoutY="171.0" text="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="82.0" layoutY="202.0" prefHeight="27.0" prefWidth="443.0" promptText="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <Button layoutX="82.0" onAction="#LoginAction" layoutY="256.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="429.0" layoutY="256.0" mnemonicParsing="false" text="Register">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

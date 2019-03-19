@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="javafx_demo.Controller.List" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tableView" layoutY="65.0" prefHeight="334.0" prefWidth="588.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="username" prefWidth="248.0" text="Username" />
+            <TableColumn fx:id="email" prefWidth="199.0" text="Email" />
+            <TableColumn fx:id="status" prefWidth="65.0" text="Status" />
+        </columns>
+      </TableView>
+      <Text fill="#c60707" layoutX="231.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Users" textAlignment="CENTER" wrappingWidth="138.43896484375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="517.0" layoutY="12.0" mnemonicParsing="false" text="Register" />
+   </children>
+</Pane>

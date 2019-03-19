@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <PasswordField layoutX="91.0" layoutY="277.0" prefHeight="27.0" prefWidth="443.0" promptText="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <Label layoutX="93.0" layoutY="244.0" text="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Text layoutX="226.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" wrappingWidth="148.21875">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <TextField layoutX="91.0" layoutY="120.0" prefHeight="27.0" prefWidth="443.0" promptText="Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="92.0" layoutY="90.0" text="Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="164.0" text="Email">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="91.0" layoutY="196.0" prefHeight="27.0" prefWidth="443.0" promptText="Email">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button layoutX="92.0" layoutY="328.0" mnemonicParsing="false" text="Register">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Hyperlink layoutX="91.0" layoutY="26.0" text="&lt;&lt; Back" />
+   </children>
+</Pane>
