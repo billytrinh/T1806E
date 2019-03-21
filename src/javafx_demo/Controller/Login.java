@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx_demo.Connector;
+import javafx_demo.DAOUser;
 import javafx_demo.Main;
 
 import java.io.IOException;
@@ -24,7 +25,7 @@ public class Login {
         String sql = "SELECT id FROM user WHERE username LIKE '"+username
                 +"' AND password LIKE '"+password+"'";
 
-       Connector connector = new Connector();
+       Connector connector = Connector.getInstance();
        try {
            ResultSet rs = connector.statement.executeQuery(sql);
            if(rs.next()){

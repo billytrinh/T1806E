@@ -30,7 +30,7 @@ public class List implements Initializable {
         status.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         String sql = "SELECT * FROM user";
-        Connector connector = new Connector();
+        Connector connector = Connector.getInstance();
 
         try {
             ResultSet rs = connector.statement.executeQuery(sql);

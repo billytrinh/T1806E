@@ -12,7 +12,9 @@ public class Connector {
     public Connection conn;
     public Statement statement;
 
-    public Connector(){
+    public static Connector instance;
+
+    private Connector(){
         try{
             Class.forName(Connector.JDBC_DRIVER);
             conn = DriverManager.getConnection(Connector.JDBC_URL,
@@ -25,5 +27,23 @@ public class Connector {
 
         }
     }
+
+    public static Connector getInstance(){
+        if(instance == null){
+            instance = new Connector();
+        }
+        return  instance;
+    }
+
+    // neu multithreads
+//    public static Connector getInstance(){
+//        if(instance == null){
+//            synchronized (Connector.class){
+//                instance = new Connector();
+//            }
+//
+//        }
+//        return  instance;
+//    }
 
 }
