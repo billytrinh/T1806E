@@ -4,8 +4,10 @@ package javafx_demo.Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx_demo.Connector;
@@ -16,6 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Login implements Initializable {
@@ -25,6 +28,8 @@ public class Login implements Initializable {
    public Text labelTop;
    public Label labelUsername;
    public Label labelPassword;
+   public RadioButton radioVi;
+   public RadioButton radioUs;
 
     @Override
     public void initialize(URL location,
@@ -64,5 +69,31 @@ public class Login implements Initializable {
 
        System.out.println("That bai");
    }
+
+   public void changeVi() throws Exception{
+
+       Main.resourceBundle = ResourceBundle.getBundle(
+               "javafx_demo.languages.message",
+               new Locale("vi","VN"));
+       Parent root = FXMLLoader.load(getClass()
+               .getResource("../fxml/login.fxml"));
+       Main.mainStage.setTitle(Main.resourceBundle.getString("login_title"));
+       radioVi.setSelected(true);
+       radioUs.setSelected(false);
+       Main.mainStage.getScene().setRoot(root);
+   }
+
+    public void changeUs() throws Exception{
+
+        Main.resourceBundle = ResourceBundle.getBundle(
+                "javafx_demo.languages.message",
+                new Locale("en","US"));
+        Parent root = FXMLLoader.load(getClass()
+                .getResource("../fxml/login.fxml"));
+        Main.mainStage.setTitle(Main.resourceBundle.getString("login_title"));
+        radioVi.setSelected(false);
+        radioUs.setSelected(true);
+        Main.mainStage.getScene().setRoot(root);
+    }
 
 }
