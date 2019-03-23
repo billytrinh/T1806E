@@ -30,6 +30,7 @@ public class Login implements Initializable {
    public Label labelPassword;
    public RadioButton radioVi;
    public RadioButton radioUs;
+   public static String lang = "us";
 
     @Override
     public void initialize(URL location,
@@ -44,6 +45,13 @@ public class Login implements Initializable {
                 .getString("label_username"));
         txtPassword.setPromptText(Main.resourceBundle
                 .getString("label_password"));
+        if(lang.equals("us")){
+            radioVi.setSelected(false);
+            radioUs.setSelected(true);
+        }else if(lang.equals("vi")){
+            radioUs.setSelected(false);
+            radioVi.setSelected(true);
+        }
     }
 
     public void LoginAction()  {
@@ -71,28 +79,24 @@ public class Login implements Initializable {
    }
 
    public void changeVi() throws Exception{
-
+       lang = "vi";
        Main.resourceBundle = ResourceBundle.getBundle(
                "javafx_demo.languages.message",
                new Locale("vi","VN"));
        Parent root = FXMLLoader.load(getClass()
                .getResource("../fxml/login.fxml"));
        Main.mainStage.setTitle(Main.resourceBundle.getString("login_title"));
-       radioVi.setSelected(true);
-       radioUs.setSelected(false);
        Main.mainStage.getScene().setRoot(root);
    }
 
     public void changeUs() throws Exception{
-
+        lang = "us";
         Main.resourceBundle = ResourceBundle.getBundle(
                 "javafx_demo.languages.message",
                 new Locale("en","US"));
         Parent root = FXMLLoader.load(getClass()
                 .getResource("../fxml/login.fxml"));
         Main.mainStage.setTitle(Main.resourceBundle.getString("login_title"));
-        radioVi.setSelected(false);
-        radioUs.setSelected(true);
         Main.mainStage.getScene().setRoot(root);
     }
 
